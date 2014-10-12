@@ -11,7 +11,7 @@ class PostfixNotation {
 	string stack[100];
 	int stackPointer;
 	//------------
-	double polishNotation[100];
+	long double polishNotation[100];
 	int pnPointer;
 public:
 	PostfixNotation(string ex);
@@ -19,7 +19,7 @@ public:
 	void toArray(string ex);
 	void toPostfixNotation();
 	void ReversePolishNotation();
-	double action(char p, double a, double b);
+	long double action(char p, long double a, long double b);
 };
 
 void PostfixNotation::toArray(string ex){
@@ -143,7 +143,7 @@ void PostfixNotation::toPostfixNotation(){
 			++rpnPointer;
 			}
 		}
-	}
+	} 
 
 	//for(int i = 0 ; i < rpnPointer; i++){
 	//	cout << rpn[i] << " ";
@@ -154,9 +154,9 @@ PostfixNotation::PostfixNotation(string ex){
 	toArray(ex);
 	toPostfixNotation();
 	ReversePolishNotation();
-	if(pnPointer == 0)
-		cout << polishNotation[0] << endl;
-	else cout << "Unspecified error!" << endl;
+	if(pnPointer == 0){
+		cout << fixed << polishNotation[0] << endl;
+	}else cout << "Unspecified error!" << endl;
 
 	//for(int i = 0; i < pointer; i++){
 	//	cout << pn[i] << endl;
@@ -169,7 +169,7 @@ void PostfixNotation::ReversePolishNotation(){
 	for(int i = 0; i < rpnPointer; i++){
 		if(rpn[i][rpn[i].length()-1] - '0' >= 0 && rpn[i][rpn[i].length()-1] - '0' <= 9){
 			++pnPointer;
-			polishNotation[pnPointer] = atof(rpn[i].c_str());
+			polishNotation[pnPointer] = stod(rpn[i]); //atof(rpn[i].c_str());
 		}else{
 			if(pnPointer != 0){
 				polishNotation[pnPointer-1] = action(rpn[i][0], polishNotation[pnPointer-1], polishNotation[pnPointer]);
@@ -179,7 +179,7 @@ void PostfixNotation::ReversePolishNotation(){
 	}
 }
 
-double PostfixNotation::action(char p, double a, double b){
+long double PostfixNotation::action(char p, long double a, long double b){
 	switch(p){
 	case '+': return a+b; break;
 	case '-': return a-b; break;
@@ -202,6 +202,7 @@ int PostfixNotation::getPriority(char p){
 bool checkError(string);
 
 int main(){
+	//system("COLOR 70");
 	string expression;
 	cin >> expression;
 
@@ -214,6 +215,7 @@ int main(){
 
 	}else cout << "ERROR!" << endl;
 
+	
 	
 	system("PAUSE");
 	return 0;
