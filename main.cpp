@@ -11,7 +11,7 @@ class PostfixNotation {
 	string stack[100];
 	int stackPointer;
 	//------------
-	long double polishNotation[100];
+	double polishNotation[100];
 	int pnPointer;
 public:
 	PostfixNotation(string ex);
@@ -19,7 +19,7 @@ public:
 	void toArray(string ex);
 	void toPostfixNotation();
 	void ReversePolishNotation();
-	long double action(char p, long double a, long double b);
+	double action(char p, double a, double b);
 };
 
 void PostfixNotation::toArray(string ex){
@@ -155,7 +155,9 @@ PostfixNotation::PostfixNotation(string ex){
 	toPostfixNotation();
 	ReversePolishNotation();
 	if(pnPointer == 0){
-		cout << fixed << polishNotation[0] << endl;
+		cout << endl << ">>>>>>>>>>>>>>>>>>>>>>>>>" << endl;
+		cout << fixed << "PASUXI: " << polishNotation[0] << endl;
+		cout << "<<<<<<<<<<<<<<<<<<<<<<<<<" << endl;
 	}else cout << "Unspecified error!" << endl;
 
 	//for(int i = 0; i < pointer; i++){
@@ -169,7 +171,7 @@ void PostfixNotation::ReversePolishNotation(){
 	for(int i = 0; i < rpnPointer; i++){
 		if(rpn[i][rpn[i].length()-1] - '0' >= 0 && rpn[i][rpn[i].length()-1] - '0' <= 9){
 			++pnPointer;
-			polishNotation[pnPointer] = stod(rpn[i]); //atof(rpn[i].c_str());
+			polishNotation[pnPointer] = atof(rpn[i].c_str()); //stod(rpn[i])
 		}else{
 			if(pnPointer != 0){
 				polishNotation[pnPointer-1] = action(rpn[i][0], polishNotation[pnPointer-1], polishNotation[pnPointer]);
@@ -179,7 +181,7 @@ void PostfixNotation::ReversePolishNotation(){
 	}
 }
 
-long double PostfixNotation::action(char p, long double a, long double b){
+double PostfixNotation::action(char p, double a, double b){
 	switch(p){
 	case '+': return a+b; break;
 	case '-': return a-b; break;
@@ -202,20 +204,25 @@ int PostfixNotation::getPriority(char p){
 bool checkError(string);
 
 int main(){
-	//system("COLOR 70");
+	system("COLOR 4F");
 	string expression;
-	cin >> expression;
+	
+	//polonuri notacia
 
 	//a = atof(p.c_str());
 	//cout << a << endl;
+	while(expression!="0"){
 	
+		cout << "............................................"
+			<< endl << "Sheiyvanet matematikuri gamosaxuleba da bolos daumatet (=). Gasvla (0): " << endl;
+	cin >> expression;
 	if(!checkError(expression)){
 		
 		PostfixNotation Postfixnotation(expression);
 
-	}else cout << "ERROR!" << endl;
+	}else cout <<  endl << (expression!="0" ? "Tqven arasworad sheiyvanet matematikuri gamosaxuleba!" : "") << endl << endl;
 
-	
+	}
 	
 	system("PAUSE");
 	return 0;
