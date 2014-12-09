@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <windows.h>
 using namespace std;
 
 class PostfixNotation {
@@ -156,9 +157,9 @@ PostfixNotation::PostfixNotation(string ex){
 	ReversePolishNotation();
 	if(pnPointer == 0){
 		cout << endl << ">>>>>>>>>>>>>>>>>>>>>>>>>" << endl;
-		cout << fixed << "PASUXI: " << polishNotation[0] << endl;
+		cout << fixed << "pasuxi: " << polishNotation[0] << endl;
 		cout << "<<<<<<<<<<<<<<<<<<<<<<<<<" << endl;
-	}else cout << "Unspecified error!" << endl;
+	}else cout << "ar vici ra mouvida :(" << endl;
 
 	//for(int i = 0; i < pointer; i++){
 	//	cout << pn[i] << endl;
@@ -204,7 +205,8 @@ int PostfixNotation::getPriority(char p){
 bool checkError(string);
 
 int main(){
-	system("COLOR 4F");
+	system("COLOR 8F");
+	system("mode con:cols=90 lines=20"); //18pt
 	string expression;
 	
 	//polonuri notacia
@@ -214,22 +216,22 @@ int main(){
 	while(expression!="0"){
 	
 		cout << "............................................"
-			<< endl << "Sheiyvanet matematikuri gamosaxuleba da bolos daumatet (=). Gasvla (0): " << endl;
+			<< endl << "SeiyvaneT maTematikuri gamosaxuleba da bolos daumateT (=). gasvla (0): " << endl;
 	cin >> expression;
 	if(!checkError(expression)){
 		
 		PostfixNotation Postfixnotation(expression);
 
-	}else cout <<  endl << (expression!="0" ? "Tqven arasworad sheiyvanet matematikuri gamosaxuleba!" : "") << endl << endl;
+	}else cout <<  endl << (expression!="0" ? "Tqven arasworad SeiyvaneT maTematikuri gamosaxuleba!" : "") << endl << endl;
 
 	}
 	
-	system("PAUSE");
+	
 	return 0;
 }
 
 bool checkError(string ex){
-	if(ex[ex.length()-1] != '=') return true;
+	if(ex[ex.length()-1] != '=' || ex.length()==1) return true;
 	int brackets = 0, ch = 0, dotcount = 0;
 
 	for(int i = 0; i < ex.length(); i++){
