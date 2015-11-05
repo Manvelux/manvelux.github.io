@@ -1,216 +1,214 @@
-
 <!DOCTYPE html>
+
 <html>
 <head>
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<style type="text/css">
-body {background-color:black;}
-h1 { color: #ffffff;
-font-weight: 400;
-font-family: 'Oswald', sans-serif;
-margin-top: 3%;
-}
-hr{
-width: 60%;
-height: 2%;
-color: #ffffff;
-margin-top: -1%;
-margin-bottom: 0%;
-}
-p{
-margin-left: 20%;
-margin-right: 20%;
-margin-top: 0%;
-color: #ffffff;
-font-family: 'Oswald', sans-serif;
-font-weight: 400;
-}
-a { color: #ffffff; }
-a:hover { color: pink; }
-i{
-font-size: 22pt;
-}
-.pg{
-margin-left: 220px;
-margin-right: 20%;
-margin-top: 0%;
-color: #ffffff;
-font-family: 'Oswald', sans-serif;
-font-weight: 400;
-}
-.gameBlock{
-background-color: gray;
-margin-left: 20%;
-margin-right: 20%;
-margin-bottom: 2%;
-}
-</style>
 <title>Manvelux</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style>
+	
+	body{margin: 0; padding: 0; word-wrap: break;}
+	
+	h1,h2,h3,h4,h5,h6,p,li{
+	font-family: 'Roboto Slab', serif;
+	}
+	a{color: #ffffff;}
+	a:hover{color: #dfdfdf;}
+	nav{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 60px;
+		background-color: #fcfcfc;
+		
+		box-shadow: 1px 1px 1px #808080;
+	}
+	
+	li{
+		display: inline;
+		font-size: 15pt;
+		padding-right: 20px;
+	}
+	
+	li a{
+		text-decoration: none;
+		color: #0f0f0f;
+	}
+	
+	li a:hover{
+		color: gray;
+	}
+	
+	
+	ul{
+		padding: 2px;
+		text-align: center;
+	}
+	div{
+		width: 100%;
+		height: 100vh;
+	}
+	
+	#manvelux{ background-color: #b89085; }
+	#games{ background-color: #6f3963; }
+	#apps{ background-color: #d47862; }
+	#contact{ background-color: #c39cbb; }
+	#about{ background-color: #ff7992; }
+	
+	div h1{
+		margin: 0;
+		padding-top: 100px;
+		padding-left: 100px;
+		padding-bottom: 20px;
+		color: white;
+		text-shadow: 1px 1px 1px #4b4b4b;
+	}
+
+	div p{
+		margin:0;
+		padding-left: 100px;
+		font-size: 15pt;
+		color: #ffffff;
+		text-shadow: 1px 1px 1px #4b4b4b;
+	}
+	
+	#manvelux h1{
+		margin: 0;
+		padding-left: 40vh;
+		padding-top: 40vh;
+		color: white;
+		text-shadow: 1px 1px 1px #4b4b4b;
+	}
+	
+	#manvelux p{
+		margin:0;
+		padding-left: 40vh;
+		font-size: 15pt;
+		color: #ffffff;
+		text-shadow: 1px 1px 1px #4b4b4b;
+	}
+	
+</style>
+
+
 </head>
+
 <body>
-<div>
-<h1 align = "center">Manvelux</h1>
-<hr>
-<p>
-<i>Projects </i> >>>>>>>>>>>>>>>>>>>>>>>> <a href = "mailto:manvel.kloyan@gmail.com">Contact Me</a> >>>>>>>>> <a href = "https://twitter.com/Manvelux">Twitter</a>
-</p>
-
-<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmanvelux.github.io%2F&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true" align = "left"></iframe>
-
-
-
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh6.ggpht.com/1m5-ZmQVqNNQvgrtzHAdV2iWViVNivieQpEysqC2YepIU8emB1m1krMGpH6IeyLayqo=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.oncomingtraffic">Save The Box</a> [Arcade]</p>
-<p class = "pg">Save The Box...Hardcore game in which you need to save the box ...</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.oncomingtraffic">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
+<nav>
+	<ul>
+		<li><a id ="manveluxurl"  href = "#manvelux">Manvelux</a></li>
+		<li>|</li>
+		<li><a id = "gamesurl" href = "#games">Games</a></li>
+		<li><a id = "appsurl" href = "#apps">Apps</a></li>
+		<li><a id = "abouturl" href = "#about">About</a></li>
+		<li><a id = "contacturl" href = "#contact">Contact us</a></li>
+		
+	</ul>
+</nav>
+<div id = "manvelux">
+	<h1>Welcome to Manvelux!</h1>
+	<p>That's not all...</p>
 </div>
-</div>	
+
+<div id = "games">
+	<h1>Games</h1>
+	<div style = "width: 100px; height: 100px; float: left;">
+	<a href = "https://play.google.com/store/apps/details?id=com.manvelux.descent"><img style = "width: 100px; height: 100px;" src = "https://lh4.ggpht.com/ST4uM4LibngsHQfLztNscRQ7FYJyNjYkS457OwO4H_FfxYZAsoc1l2PhYo4uIzQr-Q=w300" alt = "Descent"/></a>
+	</div>
+	<div style = "width: 100px; height: 100px; float: left;">
+	<a href = "https://play.google.com/store/apps/details?id=com.manvelux.squarerunner"><img style = "width: 100px; height: 100px;" src = "https://lh5.ggpht.com/6EoiiT674ZTH0ltlE0_VwSbAlcqqgXO436wWMAAiBwJ2rfKlZ2bK_f8Fhon_qh8nIow=w300" alt = "Square Runner"/></a>
+	</div>
+	<div style = "width: 100px; height: 100px; float: left;">
+	<a href = "https://play.google.com/store/apps/details?id=com.manvelux.solargravity"><img style = "width: 100px; height: 100px;" src = "https://lh4.ggpht.com/D9MtBnT_4-lcE2Fl3kC5nRCnH-kob6c19AjT9YpudIlKacaR3dimaOCEyWGMjePik98=w300" alt = "Solar Gravity"/></a>
+	</div>
+	<div style = "width: 100px; height: 100px; float: left;">
+	<a href = "https://play.google.com/store/apps/details?id=com.manvelux.researcher"><img style = "width: 100px; height: 100px;" src = "https://lh3.ggpht.com/hl6gfseQ1tt7vzLTSiRU6tDgO2Q_dS76HEjA63VisxxzuM8nBny7EIJexdgpDcxZL9o=w300" alt = "Descent"/></a>
+	</div>
+	
+	
+	<div style = "width: 100px; height: 100px; float: left;">
+	<a href = "https://play.google.com/store/apps/details?id=com.manvelux.toucher">
+	<img style = "width: 100px; height: 100px;" src = "https://lh6.ggpht.com/UaCRIWKBnZQrsCA84xGjHHx0XYZrPaq2L7KwPhTSna6obHmT0dT3Or4FSjF_iEbfu8o=w300" alt = "Toucher"/></a>
+	</div>
+	
+	<div style = "width: 20%;  clear: both;">
+	<p><a href = "https://play.google.com/store/apps/developer?id=Manvelux">All Projects</a></p>
+	</div>
+</div>
+
+<div id = "apps">
+	<h1>Apps</h1>
+	
+	<div style = "width: 100px; height: 100px; float: left;">
+	<a href = "https://play.google.com/store/apps/details?id=com.manvelux.sportspedometer"><img style = "width: 100px; height: 100px;" src = "https://lh3.googleusercontent.com/1DaQLH4PIzPdql64EDx3louBHN2tX23uXfirjs8a_oy_Iyng49J2VFXj4rJdbkfauYx9=w300" alt = "Sports Pedometer"/></a>
+	</div>
+	<div style = "width: 100px; height: 100px; float: left;">
+	<a href = "https://play.google.com/store/apps/details?id=com.manvelux.musicplayer"><img style = "width: 100px; height: 100px;" src = "https://lh3.googleusercontent.com/sPuCsZC1Oo9mnV6KsMwRUy5410tRqupmPOKtZnS-QLUE7iub_tfZ1tEoR5X69EHGJqQj=w300" alt = "Neptune Player"/></a>
+	</div>
+	
+
+	<div style = "width: 100px; height: 100px; float: left;">
+	<a href = "https://play.google.com/store/apps/details?id=com.manvelux.funnymath">
+	<img style = "width: 100px; height: 100px;" src = "https://lh5.ggpht.com/q7aDmmrVqkeGNvPa76Oge0m4BvIdrPlhfpuzpcoxJEXHwB73G3AFBepyOkvna8efZsM9=w300
+	" alt = "Funny Math"/></a>
+	</div>
+	
+	
+	<div style = "width: 30%;  clear: both;">
+	<p><a href = "https://play.google.com/store/apps/developer?id=Manvelux">All Projects</a></p>
+	</div>
+</div>
+
+<div id = "about">
+
+	<h1>About Manvelux</h1>
+	<p>Manvelux created in 2014 by Manvel Kloyan.</p>
+	<p>Manvelux develops applications and games for Android OS.</p>
+	<p>We developed about 15 applications and games.</p>
+</div>
+
+<div id = "contact">
+	<h1>Contact Us</h1>
+	<p><a href = "mailto:manvel.kloyan@gmail.com">E-Mail</a></p>
+	<p><a href = "https://twitter.com/manvelux">Twitter</a></p>
+</div>
 
 
 
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh3.ggpht.com/hl6gfseQ1tt7vzLTSiRU6tDgO2Q_dS76HEjA63VisxxzuM8nBny7EIJexdgpDcxZL9o=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.researcher">Researcher</a> [Arcade]</p>
-<p class = "pg">Your mission is to explore new planets and stars moving on them. The game is very exciting and I think people like it.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.researcher">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
+<script>
 
 
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh4.ggpht.com/D9MtBnT_4-lcE2Fl3kC5nRCnH-kob6c19AjT9YpudIlKacaR3dimaOCEyWGMjePik98=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.solargravity">Solar Gravity</a> [Arcade]</p>
-<p class = "pg">Solar Gravity is a hardcore game. The challenge is to switch to a new orbit, but it's getting harder and harder to do that because of the rotation speed increase.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.solargravity">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
+$(document).ready(function(){
 
+$('#manveluxurl').click(function(event) {
+   event.preventDefault();
+  $('html, body').animate({ scrollTop: $('#manvelux').offset().top });
+});
 
+$('#abouturl').click(function(event) {
+event.preventDefault();
+   $('html, body').animate({ scrollTop: $('#about').offset().top });
+});
 
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh4.ggpht.com/ST4uM4LibngsHQfLztNscRQ7FYJyNjYkS457OwO4H_FfxYZAsoc1l2PhYo4uIzQr-Q=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.descent">Descent</a> [Arcade]</p>
-<p class = "pg">Descent is a hardcore game where you need to keep the square on the screen as long as possible.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.descent">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
+$('#gamesurl').click(function(event) {
+event.preventDefault();
+   $('html, body').animate({ scrollTop: $('#games').offset().top });
+});
 
+$('#appsurl').click(function(event) {
+event.preventDefault();
+   $('html, body').animate({ scrollTop: $('#apps').offset().top });
+});
 
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh3.ggpht.com/tko5rp4w4MS1vacSVOob4lokuqVyi7yu9pzUVY3oseoOulRES4ZtShLNPBY00_uWrdLD=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.spaceward">SpaceWard</a> [Space Shooter]</p>
-<p class = "pg">SpaceWard is a classic space shooter with beautiful graphics. Destroy many ships will be very difficult.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.spaceward">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh5.ggpht.com/6EoiiT674ZTH0ltlE0_VwSbAlcqqgXO436wWMAAiBwJ2rfKlZ2bK_f8Fhon_qh8nIow=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.squarerunner">Square Runner</a> [Arcade, Hardcore]</p>
-<p class = "pg">Square Runner is a hardcore game. Your task is to beware of red squares and collect the blue squares.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.squarerunner">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh5.ggpht.com/q7aDmmrVqkeGNvPa76Oge0m4BvIdrPlhfpuzpcoxJEXHwB73G3AFBepyOkvna8efZsM9=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.funnymath">Funny Math</a> [Education]</p>
-<p class = "pg">Our app will help you to strengthen your knowledge in mathematics. Funny Math is suitable not only for children but also for adults.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.funnymath">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh4.ggpht.com/ZXm9_xG8ovZ94zQbtR5153G1rGFA1FC9sjy8VEITjbbv3O4bMv7MNK6GRRNKCbpZmBM=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.abr">Angry Block Runner</a> [Arcade, Hardcore]</p>
-<p class = "pg">You need to run as much as possible.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.abr">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh6.ggpht.com/UaCRIWKBnZQrsCA84xGjHHx0XYZrPaq2L7KwPhTSna6obHmT0dT3Or4FSjF_iEbfu8o=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.toucher">Toucher</a> [Arcade]</p>
-<p class = "pg">In this game you need to click on the squares at a time. Collect a lot of clicks will be very difficult.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.toucher">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
-<div class = "gameBlock" >
-<div style = " background-image: url(https://lh4.ggpht.com/JGmRpoJZbwgx_6kaNxhuSJ85sUKGYUnXrdHbdaKyhKwm_GShA_aRcX9A4rxHyHTdMLJ8=w300); background-size: 200px; background-repeat: no-repeat;
-height: 200px;
-">
-<p class = "pg"><a href="https://play.google.com/store/apps/details?id=com.manvelux.superpilot">SuperPilot</a> [Arcade]</p>
-<p class = "pg">Feel like a real pilot in our hardcore game. Beat record flying through 2 sine wave.</p>
-<p class = "pg">
-<a href="https://play.google.com/store/apps/details?id=com.manvelux.superpilot">
-<img alt="Android app on Google Play"
-src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
-</a>
-</p>
-</div>
-</div>	
-<p align = "right">............That's not all </p>
-<hr>
-</div>
+$('#contacturl').click(function(event) {
+event.preventDefault();
+    $('html, body').animate({ scrollTop: $('#contact').offset().top });
+});
+
+});
+</script>
+
 </body>
+
 </html>
